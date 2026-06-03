@@ -137,6 +137,8 @@ python main.py --model Qwen/Qwen2.5-VL-7B-Instruct --demo
 - Supports arbitrary open-vocabulary natural language commands
 - 3-level parsing fallback ensures zero crashes from malformed VLM output
 - Validated across 20+ natural language instructions
+- 13+ dedicated test scripts with cross-version compatibility testing
+- Successfully executes complex multi-step operations: "Take the carrot out of the bowl and put the eggplant inside"
 
 ---
 
@@ -144,11 +146,11 @@ python main.py --model Qwen/Qwen2.5-VL-7B-Instruct --demo
 
 | Member | Role |
 |--------|------|
-| **Li Yuanping** | VLM interface core development |
-| Team Member 2 | Motion planning & robot execution |
-| Team Member 3 | Environment setup & testing |
-| Team Member 4 | Memory module & integration |
-| Team Member 5 | Visualization & documentation |
+| **Li Yuanping** | VLM Interface and JSON Parsing Engine |
+| Cheng Yazheng | Custom Environment and Simulation Core |
+| Chen Zhishen | Scene Memory System |
+| Yuan Jinjiang | Robot Motion Execution Support |
+| Zhao Miyang | Pipeline Integration and Documentation |
 
 ---
 
