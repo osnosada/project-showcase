@@ -19,6 +19,13 @@ A simulation system where a Panda robotic arm understands open-vocabulary natura
 - **Tech Stack:** Python, ManiSkill3, Qwen2.5-VL, Numerical Jacobian IK, PandaArm Motion Planning
 - **My Role:** VLM interface core developer — integrated Qwen2.5-VL, built 3-level JSON parsing fallback, semantic name mapping, and prompt engineering
 
+### 3. [Minesweeper Rogue (扫雷地牢)](./boom-game/)
+
+A Roguelike minesweeper game with a unique "release-to-explode" mechanic, talent/skill systems, room-based dungeon progression, and Boss battles — built with Python + Pygame.
+
+- **Tech Stack:** Python, Pygame, Procedural Audio Synthesis, PyInstaller
+- **My Role:** Sole developer — designed and implemented all game systems (core mechanic, Roguelike rooms, talents/skills, Boss AI, procedural audio, save/achievements/shop/stats)
+
 ---
 
 ## About Me
