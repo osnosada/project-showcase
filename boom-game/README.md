@@ -2,52 +2,31 @@
 
 A Roguelike minesweeper game that blends traditional minesweeper reasoning with dungeon-crawling progression, inspired by *Soul Knight*'s room structure and classic minesweeper mechanics.
 
-## Core Innovation
+## Core Mechanics
 
 | Mechanic | Description |
 |----------|-------------|
-| **Release-to-Explode** | Players can step on mines safely — they only detonate when the player steps off, enabling strategic probing |
-| **Goal-Oriented** | No need to clear the entire board — just navigate from start to exit |
-| **IQ Damage System** | Getting hit reduces IQ instead of killing the player; IQ reaches 0 = game over |
-| **Chain Explosions** | Mine blasts (1–2 tile radius) trigger cascading chain reactions |
-| **Knockback** | Explosions push the player in the opposite direction |
+| **IQ Damage System** | Getting hit reduces IQ instead of HP; IQ reaches 0 = game over — a humorous Roguelike twist |
+| **Chain Explosions** | Stepping on a mine triggers cascading chain reactions across adjacent tiles |
+| **Goal-Oriented** | Navigate from start to exit to clear a level — no need to sweep the entire board |
 
 ## Game Systems
 
-### Talent System (Passive)
-- **Lucky Star** — First move or next step avoids mines; may alter layout
-- **Chess Master** — Movement changes to chess-piece patterns (King / Knight / Bishop / Rook)
-- **Flash** — Move 2 tiles at once; can dash out of blast range
+### Talent System (Passive — chosen at start of each run)
+- **Chess Master** — Movement pattern changes to chess Knight, allowing L-shaped moves
+- **Lucky Star** — First dangerous step avoids the mine; the mine disappears from the board
+- **Detector** — Reveal numbers in a 3×3 area around the mouse cursor
 
-### Skill System (Active)
-| Skill | Rarity | Effect |
-|-------|--------|--------|
-| Steel Plate | Common | Cover a tile — walkable but hidden |
-| Box | Rare | Like Steel Plate but pushable |
-| Clone | Epic | Place a phantom on a tile; recall to trigger its effect |
-| Detector | Common | Reveal numbers in a 3×3 area |
-| Remote Flag | Common | Place/remove flags at range |
-| Brain Tonic | Common | Restore 20 IQ |
-| Blast Suit | Rare | Next explosion deals 0 IQ damage |
+### Skill System (Active — acquired during gameplay)
+| Skill | Effect |
+|-------|--------|
+| Brain Tonic (脑白金) | Restore 20 IQ points |
+| Blast Suit (防爆服) | Next mine explosion deals 0 IQ damage |
 
-### Room & Level System
-- Room layouts from 3×3 to 5×5 (inspired by *Soul Knight*)
-- 5 room types: Start, Exit, Normal, Shop, Boss
-- Procedurally generated mine layouts with safe zones at start/exit
-- Mini-map navigation
-
-### Boss System
-- 3 distinct Boss types with phase-based attack patterns
-- Attack speed increases as Boss HP drops (3 phases)
-
-### Supporting Systems
-- **Save System** — 3 save slots
-- **Settings** — Volume, difficulty, key bindings, fullscreen toggle
-- **Tutorial** — 11-step interactive tutorial
-- **Statistics** — Rooms cleared, mines triggered, IQ lost, steps taken
-- **Achievements** — 12 unlockable achievements
-- **Shop** — Purchase items between rooms
-- **Procedural Audio** — All sound effects generated programmatically (no external audio files needed)
+### Menu & Settings
+- Level selection screen
+- Volume control and fullscreen toggle
+- In-game tutorial with basic instructions
 
 ## Tech Stack
 
@@ -55,9 +34,7 @@ A Roguelike minesweeper game that blends traditional minesweeper reasoning with 
 |----------|-----------|
 | Language | Python 3.8+ |
 | Game Framework | Pygame 2.5+ |
-| Architecture | Modular MVC (core / entities / ui / utils) |
-| Audio | Programmatic synthesis (no external files) |
-| Build | PyInstaller (Windows executable) |
+| Architecture | Modular (core / entities / ui / utils) |
 | AI Assistance | Developed with AI coding tools |
 
 ## Project Structure
@@ -65,17 +42,13 @@ A Roguelike minesweeper game that blends traditional minesweeper reasoning with 
 ```
 minesweeper_rogue/
 ├── main.py              # Game entry point & menu
-├── editor.py            # Level editor
-├── debug.py             # Debug tools
 ├── src/
 │   ├── core/            # Game controller, grid logic, level manager
 │   ├── entities/        # Player, items, mines
 │   ├── ui/              # Renderer, HUD
-│   └── utils/           # Audio, save, settings, tutorial, achievements,
-│                        # shop, boss, stats, particles, animation, fonts
+│   └── utils/           # Audio, settings, tutorial, constants, helpers, fonts
 ├── assets/              # Fonts, images, sounds
-├── data/                # Level configs, balance, saves
-└── build/               # PyInstaller output
+└── data/                # Level configs, balance, saves
 ```
 
 ## Controls
@@ -83,11 +56,7 @@ minesweeper_rogue/
 | Key | Action |
 |-----|--------|
 | WASD / Arrow Keys | Move character |
-| Left Click | Click-to-move on valid tile |
-| Right Click | Place / remove flag |
-| F | Flag current tile |
-| E | Place clone |
-| R | Recall clone |
+| Mouse Left Click | Click-to-move / select area for Detector |
 | Space | Use selected skill |
 | 1–5 | Select skill slot |
 | ESC | Pause / Resume |
@@ -95,19 +64,17 @@ minesweeper_rogue/
 ## My Role
 
 **Sole Developer** — Designed and implemented the entire game, including:
-- Core "release-to-explode" minesweeper mechanic and chain explosion system
-- Roguelike room-based level structure with procedural generation
-- Talent & skill system with rarity tiers and cooldowns
-- Boss battle system with multi-phase attack patterns
-- Procedural audio synthesis engine
-- Save, settings, tutorial, achievement, shop, and statistics subsystems
-- Particle effects, screen shake, damage numbers, and UI animations
+- Core minesweeper mechanic with IQ damage system and chain explosions
+- Roguelike room-based level progression
+- Talent system (3 passive talents) and skill system (2 active skills)
+- Menu system with level selection, settings, and tutorial
+- All game logic, rendering, and UI
 
 ## Development Notes
 
 - Developed over Feb–May 2026 as a personal project with AI-assisted coding
-- The game is in v0.1 Alpha — core systems are functional but some features listed in the roadmap (more themes, background music, level editor, full art assets) are not yet implemented
-- Known bugs exist; the project serves as a learning exercise in game design and Python development
+- The game is a functional demo — core gameplay loop (talent selection → room exploration → skill usage → level completion) is fully playable
+- Some features in the original roadmap (more talents/skills, Boss battles, shop, achievements, save system, full art assets) are not yet implemented
 
 ## How to Run
 
