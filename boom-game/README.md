@@ -2,6 +2,8 @@
 
 A Roguelike minesweeper game that blends traditional minesweeper reasoning with dungeon-crawling progression, inspired by *Soul Knight*'s room structure and classic minesweeper mechanics.
 
+**Demo Video:** [demo.mp4](./demo.mp4)
+
 ## Core Mechanics
 
 | Mechanic | Description |
