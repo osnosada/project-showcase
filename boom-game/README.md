@@ -15,11 +15,11 @@ A Roguelike minesweeper game that blends traditional minesweeper reasoning with 
 ### Talent System (Passive — chosen at start of each run)
 - **Chess Master** — Movement pattern changes to chess Knight, allowing L-shaped moves
 - **Lucky Star** — First dangerous step avoids the mine; the mine disappears from the board
-- **Detector** — Reveal numbers in a 3×3 area around the mouse cursor
 
 ### Skill System (Active — acquired during gameplay)
 | Skill | Effect |
 |-------|--------|
+| Detector | Reveal numbers in a 3×3 area around the mouse cursor |
 | Brain Tonic (脑白金) | Restore 20 IQ points |
 | Blast Suit (防爆服) | Next mine explosion deals 0 IQ damage |
 
@@ -66,7 +66,7 @@ minesweeper_rogue/
 **Sole Developer** — Designed and implemented the entire game, including:
 - Core minesweeper mechanic with IQ damage system and chain explosions
 - Roguelike room-based level progression
-- Talent system (3 passive talents) and skill system (2 active skills)
+- Talent system (passive talents like Chess Master, Lucky Star, etc.) and skill system (active skills like Detector, Brain Tonic, Blast Suit, etc.)
 - Menu system with level selection, settings, and tutorial
 - All game logic, rendering, and UI
 

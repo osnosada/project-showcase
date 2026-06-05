@@ -24,7 +24,7 @@ A simulation system where a Panda robotic arm understands open-vocabulary natura
 A Roguelike minesweeper game with IQ damage system, chain explosions, talent/skill systems, and room-based dungeon progression — built with Python + Pygame.
 
 - **Tech Stack:** Python, Pygame
-- **My Role:** Sole developer — designed and implemented all game systems (core mechanic, IQ system, chain explosions, 3 talents, 2 skills, menu/settings/tutorial)
+- **My Role:** Sole developer — designed and implemented all game systems (core mechanic, IQ system, chain explosions, talents/skills, menu/settings/tutorial)
 
 ---
 
