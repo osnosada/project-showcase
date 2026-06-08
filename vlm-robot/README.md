@@ -2,6 +2,8 @@
 
 A simulation system where a **Panda robotic arm** understands **open-vocabulary natural language commands** via **Qwen2.5-VL** and performs multi-step pick-and-place operations in the **ManiSkill3** simulation environment.
 
+**Demo Video:** [demo_video.mp4](./demo_video.mp4)
+
 ---
 
 ## System Architecture
